@@ -5,7 +5,6 @@ package com.infiniteautomation.mango.rest.v2.model;
 
 import org.springframework.stereotype.Component;
 
-import com.infiniteautomation.mango.rest.v2.model.RestModelMapping;
 import com.serotonin.m2m2.scheduledEvents.ScheduledEventType;
 import com.serotonin.m2m2.vo.User;
 
@@ -17,7 +16,7 @@ import com.serotonin.m2m2.vo.User;
 public class ScheduledEventTypeModelMapping implements RestModelMapping<ScheduledEventType, ScheduledEventTypeModel>{
 
     @Override
-    public ScheduledEventTypeModel map(Object o, User user) {
+    public ScheduledEventTypeModel map(Object o, User user, RestModelMapper mapper) {
         return new ScheduledEventTypeModel((ScheduledEventType)o);
     }
 
